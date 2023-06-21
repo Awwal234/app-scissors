@@ -2,9 +2,9 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 import secrets, os
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
-from flask_caching import Cache
+# from flask_limiter import Limiter
+# from flask_limiter.util import get_remote_address
+# from flask_caching import Cache
 from flask_migrate import Migrate
 
 db = SQLAlchemy()
@@ -26,11 +26,11 @@ def create_app(config_name=None):
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
     
-    global cache
-    cache = Cache(app, config={'CACHE_TYPE': 'redis', 'CACHE_REDIS_URL': 'redis://localhost:6379/0'})
+    # global cache
+    # cache = Cache(app, config={'CACHE_TYPE': 'redis', 'CACHE_REDIS_URL': 'redis://localhost:6379/0'})
     
-    global limiter
-    limiter = Limiter(key_func=get_remote_address, app=app, storage_uri="redis://localhost:6379/0")
+    # global limiter
+    # limiter = Limiter(key_func=get_remote_address, app=app, storage_uri="redis://localhost:6379/0")
 
     from .views import views
     from .auth import auth
