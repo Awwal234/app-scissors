@@ -24,7 +24,7 @@ def create_app(config_name=None):
     db.init_app(app)
     migrate.init_app(app, db)
 
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
     # global cache
     # cache = Cache(app, config={'CACHE_TYPE': 'redis', 'CACHE_REDIS_URL': 'redis://localhost:6379/0'})
