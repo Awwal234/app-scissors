@@ -47,7 +47,7 @@ parso==0.8.3
 pickleshare==0.7.5
 platformdirs==2.6.2
 prompt-toolkit==3.0.36
-psutil==4.7.7
+psutil==5.9.4
 pure-eval==0.2.2
 pycodestyle==2.8.0
 pycparser==2.21
